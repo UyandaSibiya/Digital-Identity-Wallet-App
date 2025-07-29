@@ -1,0 +1,223 @@
+/* Import Inter font is already done in HTML */
+
+/* Reset and basic styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  background-image: url('/img/img.jpg'); /* Adjust filename to your background */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #dcddde;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Overlay to darken background and blur */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(40, 43, 48, 0.7);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+/* Container wrapping the forms */
+.auth-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* Both login and register form containers */
+.auth-container, .qr-code-section {
+  background-color: #36393f;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  padding: 30px;
+  color: #dcddde;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  flex-shrink: 0;
+  flex-grow: 1;
+  min-width: 300px;
+}
+
+/* QR Code aside section */
+.qr-code-section {
+  padding: 20px;
+  max-width: 350px;
+  min-width: 280px;
+}
+
+/* QR code placeholder box */
+.qr-code-placeholder {
+  width: 180px;
+  height: 180px;
+  background-color: #202225;
+  border-radius: 4px;
+  margin: 0 auto 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #7289da;
+  border: 1px dashed #7289da;
+  overflow: hidden;
+}
+
+.qr-code-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Input fields */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #4f545c;
+  border-radius: 4px;
+  background-color: #202225;
+  color: #dcddde;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input-field:focus {
+  border-color: #7289da;
+  box-shadow: 0 0 0 2px rgba(114,137,218,0.4);
+}
+
+/* Buttons */
+.auth-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s, box-shadow 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.primary-button {
+  background-color: #7289da;
+  color: white;
+}
+
+.primary-button:hover {
+  background-color: #677bc4;
+  transform: translateY(-1px);
+  box-shadow: 0 0 15px rgba(114,137,218,0.6);
+}
+
+/* Links */
+.toggle-link, .qr-link, .forgot-password-link {
+  color: #7289da;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 15px;
+  display: inline-block;
+  transition: color 0.2s, text-shadow 0.3s;
+}
+
+.forgot-password-link {
+  text-align: left;
+  display: block;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.toggle-link:hover, .qr-link:hover, .forgot-password-link:hover {
+  color: #92a4e2;
+  text-decoration: underline;
+  text-shadow: 0 0 8px rgba(114,137,218,0.8);
+}
+
+.qr-link {
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+/* Messages */
+.error-message, .success-message {
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: left;
+  display: none;
+}
+
+.error-message {
+  color: #ff5757;
+}
+
+.success-message {
+  color: #4CAF50;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  border: 3px solid rgba(255,255,255,0.3);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 800px) {
+  .auth-container-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .auth-container, .qr-code-section {
+    margin-bottom: 20px;
+    max-width: 450px;
+  }
+}
+
+/* Accessibility helper for screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

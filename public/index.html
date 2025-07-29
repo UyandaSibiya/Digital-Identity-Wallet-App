@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Wallet - Secure Login & Register</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/css/style.css" />
+</head>
+<body>
+  <main class="auth-container-wrapper" aria-label="Authentication forms">
+    <section class="auth-container" aria-labelledby="form-title">
+      <h2 id="form-title" class="text-2xl font-semibold mb-6">Access Your Digital Wallet</h2>
+
+      <!-- Login Form -->
+      <form id="login-form" autocomplete="on" novalidate onsubmit="return false;">
+        <label for="login-identifier" class="sr-only">Email or Phone Number</label>
+        <input
+          type="text"
+          id="login-identifier"
+          class="input-field"
+          placeholder="Email or Phone Number"
+          autocomplete="username"
+          required
+        />
+        <p id="login-identifier-error" class="error-message" aria-live="polite"></p>
+
+        <label for="login-password" class="sr-only">Password</label>
+        <input
+          type="password"
+          id="login-password"
+          class="input-field"
+          placeholder="Password"
+          autocomplete="current-password"
+          required
+        />
+        <p id="login-password-error" class="error-message" aria-live="polite"></p>
+
+        <a href="#" class="forgot-password-link">Forgot your password?</a>
+
+        <button type="button" id="login-button" class="auth-button primary-button">
+          Login
+          <span id="login-spinner" class="loading-spinner" aria-hidden="true"></span>
+        </button>
+        <p class="text-sm mt-3">
+          Need an account?
+          <span class="toggle-link" tabindex="0" role="button" id="show-register">Register</span>
+        </p>
+      </form>
+
+      <!-- Register Form -->
+      <form id="register-form" style="display: none;" autocomplete="on" novalidate onsubmit="return false;">
+        <label for="register-email" class="sr-only">Email</label>
+        <input
+          type="email"
+          id="register-email"
+          class="input-field"
+          placeholder="Email"
+          autocomplete="email"
+          required
+        />
+        <p id="register-email-error" class="error-message" aria-live="polite"></p>
+
+        <label for="register-username" class="sr-only">Username</label>
+        <input
+          type="text"
+          id="register-username"
+          class="input-field"
+          placeholder="Username"
+          autocomplete="username"
+          required
+        />
+        <p id="register-username-error" class="error-message" aria-live="polite"></p>
+
+        <label for="register-password" class="sr-only">Password</label>
+        <input
+          type="password"
+          id="register-password"
+          class="input-field"
+          placeholder="Password"
+          autocomplete="new-password"
+          required
+        />
+        <p id="register-password-error" class="error-message" aria-live="polite"></p>
+
+        <label for="register-confirm-password" class="sr-only">Confirm Password</label>
+        <input
+          type="password"
+          id="register-confirm-password"
+          class="input-field"
+          placeholder="Confirm Password"
+          autocomplete="new-password"
+          required
+        />
+        <p id="register-confirm-password-error" class="error-message" aria-live="polite"></p>
+
+        <button type="button" id="register-button" class="auth-button primary-button">
+          Register
+          <span id="register-spinner" class="loading-spinner" aria-hidden="true"></span>
+        </button>
+        <p class="text-sm mt-3">
+          Already have an account?
+          <span class="toggle-link" tabindex="0" role="button" id="show-login">Login</span>
+        </p>
+      </form>
+
+      <p id="general-message" class="success-message" aria-live="polite"></p>
+    </section>
+
+    <!-- QR Code Section -->
+    <aside id="qr-code-section" class="qr-code-section" aria-label="QR code login">
+      <h3 class="text-xl font-semibold mb-4">Log in with QR Code</h3>
+      <div class="qr-code-placeholder">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg"
+          alt="QR Code for Digital Wallet login"
+        />
+      </div>
+      <p class="text-sm text-gray-300 mb-4">Scan this QR code with the Digital Wallet mobile app to log in securely.</p>
+      <a href="#" class="qr-link">Or, sign in with a passkey</a>
+    </aside>
+  </main>
+  <script src="src/js/index.js"></script>
+</body>
+</html>
