@@ -107,9 +107,11 @@ To be assigned (e.g., frontend, backend, blockchain, UI/UX, documentation)
 
 MIT License. See LICENSE file for details.
 
+## TEAM 26
 
----
-
-Let me know if you want it personalized with your GitHub username, project title, or screenshots included.
+-Uyanda Sibiya
+-Nhanhla Zondi
+-lohann Doualla
+-Thuto Ratlhahane
 
 
