@@ -4,7 +4,8 @@
   "description": "A simple, front-end clone of Discord's login/register UI built with HTML, CSS, and JavaScript.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "start": "node server.js"
   },
   "keywords": [],
@@ -12,5 +13,10 @@
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "supertest": "^6.3.0",
+    "jsdom": "^22.0.0"
   }
 }

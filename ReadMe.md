@@ -25,18 +25,69 @@ This project was created to solve a real community problem: the need for safe, a
    ```bash
    git clone https://github.com/yourusername/digital-id-wallet.git
    cd digital-id-wallet
+   ```
 
-    Install dependencies:
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-npm install
+3. Run the server:
+   ```bash
+   node server.js
+   ```
 
-Run the server:
+4. Open your browser at:
+   ```
+   http://localhost:8080
+   ```
 
-node server.js
+## 🧪 Testing
 
-Open your browser at:
+### Running Tests
 
-    http://localhost:8080
+To run the complete test suite:
+
+```bash
+# Run all tests once
+npm test
+
+# Run tests in watch mode (automatically re-runs when files change)
+npm run test:watch
+
+# Run tests with coverage report
+npm test -- --coverage
+```
+
+### Test Structure
+
+Our test suite includes:
+
+- **Backend API Tests** (`tests/server.test.js`) - Tests for login/register endpoints
+- **Frontend Unit Tests** (`tests/frontend.test.js`) - Tests for utility functions like email validation
+- **Integration Tests** (`tests/integration.test.js`) - Tests for complete user flows
+
+### Test Coverage
+
+The tests cover:
+- ✅ User authentication (login/register)
+- ✅ Email validation
+- ✅ DOM manipulation utilities
+- ✅ API error handling
+- ✅ Frontend-backend integration
+
+### Prerequisites for Testing
+
+Make sure you have installed the development dependencies:
+
+```bash
+npm install --dev
+```
+
+Required testing packages:
+- `jest` - Testing framework
+- `supertest` - HTTP assertion library
+- `jsdom` - DOM simulation for frontend tests
 
 🛠 Tech Stack
 
