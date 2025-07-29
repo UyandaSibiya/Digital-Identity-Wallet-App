@@ -1,117 +1,121 @@
-# 🌐 Digital ID Wallet
+🌐 Digital ID Wallet
 
-A secure, blockchain-powered web application that allows users to store, manage, and share their personal identity documents such as IDs, passports, licenses, certificates, and insurance policies—all in one digital wallet with a quiz game to give the users knowledge on importance of insurance.
+A secure, blockchain-powered web application that allows users to store, manage, and share their personal identity documents such as IDs, passports, licenses, certificates, and insurance policies—all in one digital wallet with an educational quiz game to promote insurance and financial literacy.
+🧠 Project Summary
 
-## 🧠 Project Summary
+The Digital ID Wallet addresses a common and pressing issue: people often lose access to their essential documents or struggle to verify their authenticity quickly. This app provides a secure, accessible, and verifiable platform where users can upload, manage, and share their official documents digitally. The integrated quiz educates users on the importance of insurance and financial responsibility, empowering them with knowledge alongside document management.
+🚀 Features
 
-This project was created to solve a real community problem: the need for safe, accessible, and verifiable digital versions of essential documents. Many people face challenges when documents are lost, stolen, or inaccessible—especially in urgent situations. Our solution provides a secure platform to store, retrieve, and share documents instantly and verifiably.
+    📂 Upload and manage personal documents (IDs, certificates, CVs, licenses, passports, insurance policies)
 
-## 🚀 Features
+    📅 Document expiry tracking with automated reminders (e.g., 3-month expiry notices for South African certified documents)
 
-- 📂 Upload and manage personal documents (IDs, certificates, CVs, licenses, etc.)
-- 📅 Document expiry tracking and reminders (e.g., 3-month expiry for SA certified copies)
-- ✅ Certified copy tracking (e.g., SAPS certified documents)
-- 🔐 Secure user authentication (email & password, optional biometric)
-- 📱 QR Code functionality for quick document sharing and verification
-- 💳 Optional payment card support to simulate digital transactions
-- 🧾 Upload CVs and social links (GitHub, LinkedIn, etc.)
-- 🧬 Blockchain integration for document authenticity and tamper protection
-- 🛡️ Insurance policy storage and access
-- 🌍 Works on desktop and mobile browsers
+    ✅ Certified document status tracking (e.g., SAPS certified copies)
 
-## 🧪 How to Run (Development)
+    🔐 Secure user authentication (email & password, optional biometric login)
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourusername/digital-id-wallet.git
-   cd digital-id-wallet
+    📱 QR Code generation for quick document sharing and verification
 
-    Install dependencies:
+    💳 Optional payment card feature simulating digital wallet transactions
+
+    🧾 Upload and manage CVs and social/professional links (GitHub, LinkedIn, etc.)
+
+    🧬 Blockchain integration to ensure document authenticity and tamper-proof storage
+
+    🛡️ Insurance policy management and easy access
+
+    🎓 Interactive quizzes focused on insurance and financial literacy to educate users
+
+    🌍 Responsive design supporting both desktop and mobile browsers
+
+🧩 Tech Stack
+
+    Frontend: React.js (or your preferred framework) for a responsive and interactive user interface
+
+    Backend: Node.js with Express (alternatively Flask) for API endpoints managing authentication, documents, and quizzes
+
+    Database: MongoDB / PostgreSQL for storing user data, documents metadata, and quiz results
+
+    Security: Password hashing, JWT authentication, input validation, secure file uploads
+
+    Blockchain: Ethereum testnet or similar for storing document hashes to verify authenticity
+
+    Others: JavaScript QR code generation libraries
+
+🧪 How to Run (Development)
+
+    Clone the repository:
+
+git clone https://github.com/yourusername/digital-id-wallet.git
+cd digital-id-wallet
+
+Install dependencies:
 
 npm install
 
-Run the server:
+Run the backend server:
 
 node server.js
 
-Open your browser at:
+Open your browser and navigate to:
 
     http://localhost:8080
 
-🛠 Tech Stack
-
-    Frontend: HTML, CSS, JavaScript
-
-    Backend: Node.js + Express
-
-    Authentication: Custom (email & password)
-
-    Storage: Local (simulated), can be extended to IPFS/S3
-
-    Blockchain: Ethereum or testnet (for proof-of-concept)
-
-    QR Code: JavaScript QR generation
-
-🧩 Future Features
-
-    Biometric login (mobile support)
-
-    Decentralized file storage (IPFS)
-
-    Third-party document verification
-
-    Job application module
-
-    Mobile app version
-
 🎯 Target Users
 
-    Job seekers
+    Job seekers needing verified digital credentials
 
-    Students
+    Students managing academic certificates and IDs
 
-    Gig workers/freelancers
+    Gig workers and freelancers requiring quick document verification
 
-    Government offices verifying citizen ID
+    Government offices for faster citizen verification
 
-    Insurance and legal sectors needing document traceability
+    Insurance and legal sectors requiring secure document traceability
 
 📈 Measuring Success
 
-    Number of registered users
+    Number of registered users and active sessions
 
-    Number of documents uploaded
+    Volume of documents uploaded and shared
 
-    Frequency of document sharing (QR scans)
+    Frequency of QR code scans for document verification
 
-    User feedback
+    User engagement with insurance and financial literacy quizzes
 
-    Uptime & security audit results
+    Positive user feedback and security audit results
 
-💡 Unique Value
+💡 Unique Selling Points
 
-Unlike standard file storage or mobile wallets, our product offers:
+    Verifiable certified documents backed by blockchain
 
-    Verifiable certified documents
+    Automated expiry notifications to keep documents current
 
-    Blockchain authenticity layer
+    QR code sharing for instant verification without third parties
 
-    Expiry-based reminders
+    Educational quizzes that enhance user knowledge on insurance and finance
 
-    Government-friendly QR-based verification
+🔒 Security Considerations
 
-👥 Team Roles
+    Encrypted storage of sensitive data
 
-To be assigned (e.g., frontend, backend, blockchain, UI/UX, documentation)
-📄 License
+    Secure password hashing with strong algorithms
 
-MIT License. See LICENSE file for details.
+    JWT-based authentication with token expiration
 
-## TEAM 26
+    Validation and sanitization of all user inputs
 
--Uyanda Sibiya
--Nhanhla Zondi
--lohann Doualla
--Thuto Ratlhahane
+    Secure handling of file uploads to prevent malicious files
 
+    Blockchain integration to prevent document tampering
+
+👥 Team
+
+    Uyanda Sibiya
+
+    Nhanhla Zondi
+
+    Iohann Doualla
+
+    Thuto Ratlhahane
 
